@@ -20,6 +20,10 @@ const UserSchema = new Schema(
           ref: 'Thought',
         },
       ],
+    friends: {
+        type: Array,
+        virtual: 'friendCount'
+    },
 },
 {
     toJSON: {

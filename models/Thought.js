@@ -3,15 +3,11 @@ const dateFormat = require('../utils/dateFormat');
 
 const ThoughtSchema = new Schema(
   {
-    replyId: {
+    thoughtText: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
-    replyBody: {
-      type: String,
-      required: true,
-    },
-    writtenBy: {
+    username: {
       type: String,
       required: true,
     },
@@ -20,9 +16,14 @@ const ThoughtSchema = new Schema(
       default: Date.now,
       get: (createdAtVal) => dateFormat(createdAtVal),
     },
+    reactionBody: {
+      type: String,
+      required: true
+    },
   },
   {
     toJSON: {
+      virtuals: true,
       getters: true,
     },
   }
@@ -30,11 +31,11 @@ const ThoughtSchema = new Schema(
 
 const ReactionSchema = new Schema(
   {
-    writtenBy: {
+    reactionId: {
       type: String,
       required: true,
     },
-    thoughtBody: {
+    reactionBody: {
       type: String,
       required: true,
     },
@@ -43,7 +44,7 @@ const ReactionSchema = new Schema(
       default: Date.now,
       get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    reactions: [ReactionSchema],
+    reactions: [ThoughtSchema],
   },
   {
     toJSON: {
