@@ -1,0 +1,29 @@
+{
+  "name": "social-kinetic",
+  "version": "1.0.0",
+  "description": "This app is a social connection. Users can post and respond to other users. What is most unique about this app is the ability to handle large amounts of data and users through theunique API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PivotalSaint/social-kinetic.git"
+  },
+  "keywords": [
+    "social",
+    "connect",
+    "community"
+  ],
+  "author": "Pivotal Saint",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PivotalSaint/social-kinetic/issues"
+  },
+  "homepage": "https://github.com/PivotalSaint/social-kinetic#readme",
+  "dependencies": {
+    "jest": "^29.3.1",
+    "node": "^19.0.1"
+  }
+}
