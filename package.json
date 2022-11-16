@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/PivotalSaint/social-kinetic#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "jest": "^29.3.1",
+    "mongoose": "^6.7.2",
     "node": "^19.0.1"
   }
 }

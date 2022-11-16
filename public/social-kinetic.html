@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social-Kinetic</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Social-Kinetic</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body>
-    <header></header>
-    <main>
-    <section class="col-12 col-lg-8 ">
-        <h2 class="bg-dark p-3 m-0 rounded">Thoughts</h2>
-        <div id="thought-section" class="mb-3"></div>
-        <form id="new-thought-form" class="bg-dark p-3 mb-3 rounded">
-          <div class="mb-2">
-            <label for="written-by">Leave Your Name</label>
-            <input class="form-input" id="written-by" name="written-by" placeholder="Name" required />
-          </div>
-          <div class="mb-2">
-            <label for="thought">Leave Your Thoughts</label>
-            <textarea class="form-textarea form-input" id="thought" name="thought" required></textarea>
-          </div>
-  
-          <button class="mt-3 btn display-block w-100">Add Thoughts</button>
-        </form>
-  
-      </section>
-    <footer></footer>
-    </main>
-<script src="./assets/js/add-thought.js"></script>
+
+<body class="background is-primary">
+  <header class="py-3 mb-3">
+    <div class="flex-row justify-space-between align-center container-fluid mx-auto">
+      <a href="/social">
+        <h1 class="text-light bg-dark py-3 px-4 logo">Social-Kinetic</h1>
+      </a>
+
+      <h3 class="text-light bg-dark p-3">
+        Create Your Own Thought Board
+      </h3>
+    </div>
+  </header>
+
+  <main class="container-fluid flex-row mx-auto justify-space-between">
+    <section class="bg-dark p-3 col-12 col-lg-8 mb-3">
+      <h2 class="text-light ">Let's start our masterpiece</h2>
+      <div class="col-12 col-lg-6 bg-dark p-3 mb-3">
+        <div class="form-container">
+          <form id="pizza-form">
+            <div class="mb-2">
+              <label for="name" class="form-label">Email</label>
+              <input type="text" id="created-by" name="username" class="form-input" placeholder="Enter Your Email"
+                required />
+            </div>
+
+              <div class="col-auto">
+                <div id="custom-thought-list"></div>
+              </div>
+            </div>
+
+            <div class="w-100 display-block"></div>
+
+            <label for="add-thought" class="form-label">Add Your Thoughts</label>
+            <input type="text" id="add-thought" name="add-thought" class="form-input" placeholder="Add Thought" />
+
+            <div class="my-4 border-light-top display-block w-100"></div>
+
+            <button type="submit" class="btn w-100 m-auto">Submit Thought</button>
+          </form>
+        </div>
+    </section>
+
+    <section class="bg-dark p-3 col-12 col-lg-4 mb-3 round-25-80 min-60-vh">
+      <h2 class="text-light px-2">Looking to do something else?</h2>
+      <nav>
+        <a class="btn display-block round-25-80" href="/thought-list">See All Thoughts.</a>
+      </nav>
+    </section>
+
+    </div>
+  </main>
+  <script src="./assets/js/add-thought.js"></script>
 </body>
+
 </html>
