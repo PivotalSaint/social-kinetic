@@ -6,11 +6,11 @@ router.get("/users", (req, res) => {
 });
 
 router.get("/thoughts", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../../public/add-thought.html"));
+  res.sendFile(path.join(__dirname, "../../../public/thought-list.html"));
 });
 
-router.get("/thought-list", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../../public/thought-list.html"));
+router.get("/social", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../../public/social-kinetic.html"));
 });
 
 module.exports = router;
