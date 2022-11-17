@@ -6,6 +6,7 @@ const {
   removeReaction,
 } = require('../../controllers/thought-controller');
 
+
 router.route('/:usernameId').post(addThought);
 
 router.route('/:usernameId/:thoughtId').put(addReaction).delete(removeThought);
