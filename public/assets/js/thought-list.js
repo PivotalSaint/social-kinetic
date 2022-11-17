@@ -25,7 +25,7 @@ const printThought = ({
         <div class="card-body flex-column col-auto">
           <h4 class="text-dark">By ${createdBy}</h4>
           <p>On ${createdAt}</p>
-          <p>${thoughtCount} Comments</p>
+          <p>${thoughtCount} Thoughts</p>
           <ul>
             ${thoughts
               .map((thought) => {
