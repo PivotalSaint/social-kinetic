@@ -34,10 +34,12 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.path("email").validate(function (email) {
-  var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  return emailRegex.test(email.text);
-}, "The e-mail field cannot be empty.");
+UserSchema.virtual("friendCount").get(function () {
+  return this.thoughts.reduce(
+    (total, thought) => total + thought.reaction.length + 1,
+    0
+  )
+});
 
 const User = model("User", UserSchema);
 
